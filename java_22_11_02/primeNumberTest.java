@@ -21,7 +21,7 @@ class PrimeNumberTest
 		}
 
 		//法2
-		boolean isFlag=true;//标识i是否被j除尽，一旦除尽，修改其值
+/*		boolean isFlag=true;//标识i是否被j除尽，一旦除尽，修改其值
 		int count=0;
 		long start=System.currentTimeMillis();//获取当前时间距离1970-01-01  00:00:00的毫秒数
 		for (int i=2;i<=100000 ;i++ )
@@ -44,5 +44,28 @@ class PrimeNumberTest
 		long end=System.currentTimeMillis();
 		System.out.println("所花时间为："+(end-start));
 		System.out.println("打印质数个数为："+count);
+		System.out.println("\n");
+*/
+
+		//法3
+		int count=0;
+		long start=System.currentTimeMillis();//获取当前时间距离1970-01-01  00:00:00的毫秒数
+		label:for (int i=2;i<=100000 ;i++ )
+		{
+			for (int j=2;j<=Math.sqrt(i) ;j++ )//优化：开平方
+			{
+				if (i%j==0)
+				{
+					continue label;
+				}
+			}
+			count++;
+			System.out.println(i);
+
+		}
+		long end=System.currentTimeMillis();
+		System.out.println("所花时间为："+(end-start));
+		System.out.println("打印质数个数为："+count);
+
 	}
 }
