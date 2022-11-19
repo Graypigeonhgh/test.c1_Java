@@ -32,7 +32,7 @@ public class ArraysTool
 		System.out.println(Arrays.toString(arr1));
 		
 		
-		//4.void sort(int[] a):对数组进行排序(快速排序)
+		//4.void sort(int[] a):对数组进行排序(快速排序)(不需要使用冒泡了)
 		Arrays.sort(arr2);
 		System.out.println(Arrays.toString(arr2));
 		
