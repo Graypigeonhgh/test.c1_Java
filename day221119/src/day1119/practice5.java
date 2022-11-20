@@ -58,7 +58,7 @@ public class practice5
 				flag=false;
 			}
 		}
-		if(flag==true)//for循环结束，说明没有鞍点
+		if(flag==true)
 		{
 			System.out.println("该二维数组没有鞍点\n");
 		}
