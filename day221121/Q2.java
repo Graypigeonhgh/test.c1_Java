@@ -1,4 +1,4 @@
-package Happy.Excerise2;
+package day221121;
 
 //import cn.hutool.core.util.RandomUtil;
 
