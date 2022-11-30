@@ -14,6 +14,9 @@ public class CirlcleTest {
 		//对应方式一
 		double area=c1.findArea();
 		System.out.println(area);
+		//对应方式二
+		c1.findArea();//直接调用函数
+
 	}
 }
 
@@ -30,4 +33,10 @@ class Circle{
 		System.out.println("面积为："+area);
 		return area;
 	}
+	//方式二
+	public void findArea() {
+		double area=Math.PI*radius*radius;
+		System.out.println("面积为："+area);
+	}
+
 }
