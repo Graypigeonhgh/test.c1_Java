@@ -6,6 +6,8 @@ package day221201;
  *  @version
  *  @date 2022年12月1日下午7:25:44
  *  
+ *此代码是对Student2Test的改进，即将操作数组的功能封装到方法中
+ *
  *4.对象数组题目:
 定义类Student，包含三个属性:学号number(int)，年级grade(int)，成绩score(int)。
 创建20个学生对象，学号为1到20，年级和成绩都由随机数确定。
