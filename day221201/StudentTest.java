@@ -33,7 +33,7 @@ public class StudentTest {
 			stus[i].score=(int)(Math.random()*101);
 		}
 		
-		StudentTest test=new StudentTest();
+		StudentTest test=new StudentTest();//若想调用主函数里的方法，就要用类文件名创建对象
 		//遍历学生数组
 		test.print(stus);
 		System.out.println("***************************");
