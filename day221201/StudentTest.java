@@ -8,7 +8,7 @@ package day221201;
  *  
  *此代码是对Student2Test的改进，即将操作数组的功能封装到方法中
  *
- *4.对象数组题目:
+ 4.对象数组题目:
 定义类Student，包含三个属性:学号number(int)，年级grade(int)，成绩score(int)。
 创建20个学生对象，学号为1到20，年级和成绩都由随机数确定。
 问题一:打印出3年级(state值为3)的学生信息。
@@ -25,7 +25,7 @@ public class StudentTest {
 		Student1[] stus=new Student1[20];
 		
 		for(int i=0;i<stus.length;i++) {
-			//给数组元素赋值??????????????????????????????????????????????
+			//给数组元素赋值
 			stus[i]=new Student1();
 			//给Student对象的属性赋值
 			stus[i].number=(i+1);
@@ -117,30 +117,4 @@ class Student1{
 		return "学号："+number+",年级"+grade+",成绩"+score;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
