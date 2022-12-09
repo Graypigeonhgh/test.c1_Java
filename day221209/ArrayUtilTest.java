@@ -1,5 +1,12 @@
 package day221209;
-
+/**
+ * 
+ *  @Description
+ *  @author  greypigeon  Email:2371849349@qq.com
+ *  @version
+ *  @date 2022年12月9日下午10:48:12
+ *
+ */
 public class ArrayUtilTest {
 	public static void main(String[] args) {
 		ArrayUtil util=new ArrayUtil();
