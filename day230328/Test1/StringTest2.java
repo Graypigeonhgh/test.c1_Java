@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.sql.SQLOutput;
 
 /**
- * @description:
+ * @description:    String的常用方法
  * @authod: GreyPigeon mail:2371849349@qq.com
  * @date: 2023-03-28-21:08
  **/
@@ -36,6 +36,19 @@ public class StringTest2 {
         //判断这是否是杭州固定电话
         boolean result=tel.matches("0510-\\d{7,8}");    //开头0510-,之后有7或8位数字
         System.out.println(result);
+
+        System.out.println("*******************");
+        str ="hello|world|java";
+        String[] strs=str.split("\\|");
+        for(int i=0;i< strs.length;i++){
+            System.out.println(strs[i]);
+        }
+        System.out.println();
+        str2="hello.world.java";
+        String[] strs2=str2.split("\\.");
+        for(int i=0;i<strs2.length;i++){
+            System.out.println(strs2[i]);
+        }
 
     }
 
