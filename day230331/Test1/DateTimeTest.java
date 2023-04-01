@@ -57,7 +57,7 @@ public class DateTimeTest {
         System.out.println(birthDate);     //2031-09-08
     }
 
-    //练习2：“三天大渔两天晒网”，从1990-01-01开始，xxxx-xx-xx 后，打渔？晒网？
+    //练习2：“三天打渔两天晒网”，从1990-01-01开始，xxxx-xx-xx 后，打渔？晒网？
     @Test
     public void test1 () throws ParseException {
         String  doDate1= "1990-01-01";
