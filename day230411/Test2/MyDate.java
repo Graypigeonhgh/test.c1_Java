@@ -5,7 +5,7 @@ package day230411.Test2;
  * @authod: GreyPigeon mail:2371849349@qq.com
  * @date: 2023-04-11-22:34
  **/
-public class MyDate {
+public class MyDate implements Comparable{
     private int year;
     private int month;
     private int day;
@@ -41,5 +41,35 @@ public class MyDate {
 
     public void setDay(int day) {
         this.day = day;
+    }
+
+    @Override
+    public String toString() {
+        return "MyDate{" +
+                "year=" + year +
+                ", month=" + month +
+                ", day=" + day +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if(o instanceof MyDate){
+            MyDate m=(MyDate) o;
+            //比较年
+            int minusYear=this.getYear()-m.getYear();
+            if(minusYear != 0){
+                return minusYear;
+            }
+            //比较月
+            int minusMonth=this.getMonth()-m.getMonth();
+            if(minusMonth != 0){
+                return minusMonth;
+            }
+            //比较日
+            return this.getDay() - m.getDay();
+        }
+
+        throw new RuntimeException("传入的数据类型不一致");
     }
 }
