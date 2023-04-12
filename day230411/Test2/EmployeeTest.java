@@ -2,6 +2,8 @@ package day230411.Test2;
 
 import org.junit.Test;
 
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 /**
@@ -19,16 +21,67 @@ public class EmployeeTest {
     public void test1(){
         TreeSet set=new TreeSet();
 
-        Employee e1=new Employee("刘德华",55,new MyDate(1969,5,3));
-        Employee e2=new Employee("张学友",45,new MyDate(1975,6,8));
-        Employee e3=new Employee("郭富城",38,new MyDate(1980,3,12));
-        Employee e4=new Employee("黎明",60,new MyDate(1960,2,7));
-        Employee e5=new Employee("梁朝伟",33,new MyDate(1991,11,7));
+        Employee e1=new Employee("liudehua",55,new MyDate(1975,5,3));
+        Employee e2=new Employee("zhangxueyou",45,new MyDate(1975,6,8));
+        Employee e3=new Employee("guofucheng",38,new MyDate(1980,3,12));
+        Employee e4=new Employee("liming",60,new MyDate(1960,2,7));
+        Employee e5=new Employee("liangchaowei",33,new MyDate(1991,11,7));
 
         set.add(e1);
         set.add(e2);
         set.add(e3);
         set.add(e4);
         set.add(e5);
+    }
+
+    //问题二：按生日日期的先后排序
+    @Test
+    public void test2(){
+        TreeSet set=new TreeSet(new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                if(o1 instanceof Employee && o2 instanceof Employee){
+                     Employee e1=(Employee) o1;
+                     Employee e2=(Employee) o2;
+
+                     MyDate b1=e1.getBirthday();
+                     MyDate b2=e2.getBirthday();
+                     //方式一：
+//                     int minusYear=b1.getYear()-b2.getYear();
+//                     if(minusYear != 0){
+//                         return minusYear;
+//                     }
+//
+//                     int minusMonth=b1.getMonth()-b2.getMonth();
+//                     if(minusMonth != 0){
+//                         return minusMonth;
+//                     }
+//
+//                     return b1.getDay() - b2.getDay();
+
+                    //方式二:
+                    return b1.compareTo(b2);
+                }
+                //return 0;
+                throw new RuntimeException("传入的数据类型不一致");
+            }
+        });
+
+        Employee e1=new Employee("liudehua",55,new MyDate(1975,5,3));
+        Employee e2=new Employee("zhangxueyou",45,new MyDate(1975,6,8));
+        Employee e3=new Employee("guofucheng",38,new MyDate(1980,3,12));
+        Employee e4=new Employee("liming",60,new MyDate(1960,2,7));
+        Employee e5=new Employee("liangchaowei",33,new MyDate(1991,11,7));
+
+        set.add(e1);
+        set.add(e2);
+        set.add(e3);
+        set.add(e4);
+        set.add(e5);
+
+        Iterator iterator=set.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
     }
 }
