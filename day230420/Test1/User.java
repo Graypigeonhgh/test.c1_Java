@@ -3,7 +3,7 @@ package day230420.Test1;
 import java.util.Objects;
 
 /**
- * @description:
+ * @description:    私有化属性 id，age，name
  * @authod: GreyPigeon mail:2371849349@qq.com
  * @date: 2023-04-20-22:09
  **/
